@@ -11,8 +11,8 @@ const Faq = () => {
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
         </Col>
         <Col>
-          {accordions.map(({ title, body }, id) => {
-            return <AccordionItem id={id} title={title} body={body} />;
+          {accordions.map((accordion, id) => {
+            return <AccordionItem key={id} {...accordion} id={id} />;
           })}
         </Col>
       </Row>
