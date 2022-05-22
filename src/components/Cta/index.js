@@ -2,7 +2,7 @@ import { Button, Card, Container } from "react-bootstrap";
 
 const Cta = () => {
   return (
-    <Container>
+    <Container className="mb-section">
       <Card className="text-center bgBlue text-white p-5">
         <Card.Body>
           <h2 className="fw-bold">Sewa Mobil di (Lokasimu) Sekarang</h2>

@@ -19,3 +19,7 @@ code {
 .bgBlue {
   background-color: #0D28A6 !important;
 }
+
+.mb-section{
+  margin-bottom: 100px;
+}
