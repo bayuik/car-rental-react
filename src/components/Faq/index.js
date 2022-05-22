@@ -12,15 +12,11 @@ const Faq = () => {
           <Accordion>
             <Accordion.Item eventKey="1">
               <Accordion.Header>Apa saja syarat yang dibutuhkan?</Accordion.Header>
-              <Accordion.Body>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quae. Animi neque pariatur laborum accusamus eos excepturi et, fugiat non blanditiis sed atque numquam quo.
-              </Accordion.Body>
+              <Accordion.Body>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quae. Animi neque pariatur laborum accusamus eos excepturi et, fugiat non blanditiis sed atque numquam quo.</Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="2">
               <Accordion.Header>Apa saja syarat yang dibutuhkan?</Accordion.Header>
-              <Accordion.Body>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quae. Animi neque pariatur laborum accusamus eos excepturi et, fugiat non blanditiis sed atque numquam quo.
-              </Accordion.Body>
+              <Accordion.Body>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, quae. Animi neque pariatur laborum accusamus eos excepturi et, fugiat non blanditiis sed atque numquam quo.</Accordion.Body>
             </Accordion.Item>
           </Accordion>
         </Col>
