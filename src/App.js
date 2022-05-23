@@ -1,10 +1,14 @@
-import Home from './pages/Home';
-
+import Home from "./pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import FindCars from "./pages/FindCars";
 const App = () => {
   return (
-    <>
-      <Home />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cars" element={<FindCars />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

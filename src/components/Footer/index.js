@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import SocialMedia from "./SocialMedia";
 import { socmed } from "./socmed";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -26,7 +27,9 @@ const Footer = () => {
           </Col>
           <Col>
             <p>Copyright Binar 2022</p>
-            <img src="/images/logo.png" alt="logo" />
+            <Link to="/">
+              <img src="/images/logo.png" alt="logo" />
+            </Link>
           </Col>
         </Row>
       </Container>

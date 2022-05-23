@@ -1,4 +1,5 @@
 import { Button, Card, Container } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Cta = () => {
   return (
@@ -9,7 +10,9 @@ const Cta = () => {
           <Card.Body className="mb-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br /> tempor incididunt ut labore et dolore magna aliqua.
           </Card.Body>
-          <Button variant="success">Mulai Sewa Mobil</Button>
+          <Link to="/cars">
+            <Button variant="success">Mulai Sewa Mobil</Button>
+          </Link>
         </Card.Body>
       </Card>
     </Container>
