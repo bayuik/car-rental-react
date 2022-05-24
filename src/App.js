@@ -1,6 +1,5 @@
-import Home from "./pages/Home";
+import { Home, FindCars } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import FindCars from "./pages/FindCars";
 const App = () => {
   return (
     <BrowserRouter>

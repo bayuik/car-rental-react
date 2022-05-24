@@ -1,7 +1,4 @@
-import Footer from "../../components/Footer";
-import Header from "../../components/Header";
-import Hero from "../../components/Hero";
-import Filter from "../../components/Filter";
+import { Header, Hero, Filter, Footer } from "../../components";
 
 const FindCars = () => {
   return (
