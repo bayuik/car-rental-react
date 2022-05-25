@@ -34,3 +34,12 @@ code {
   top: -140px;
   border-radius: 10px;
 }
+
+.img-frame {
+  width: 270px;
+}
+
+.feature{
+  display: inline;
+  margin-left: 10px;
+}
