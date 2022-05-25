@@ -37,9 +37,14 @@ code {
 
 .img-frame {
   width: 270px;
+  height: 160px;
 }
 
-.feature{
+.desc {
+  height: 60px;
+}
+
+.feature {
   display: inline;
   margin-left: 10px;
 }

@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Header, Hero, Filter, CarFrame, Footer } from "../../components";
-import { addCar } from "../../features/carsSlice";
+import { addCar } from "../../features";
 
 const FindCars = () => {
   const dispatch = useDispatch();
