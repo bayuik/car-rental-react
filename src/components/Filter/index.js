@@ -7,7 +7,7 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 const Filter = () => {
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  const getData = () => {
     axios
       .get("https://raw.githubusercontent.com/fnurhidayat/probable-garbanzo/main/data/cars.min.json")
       .then((res) => {
@@ -16,25 +16,41 @@ const Filter = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [dispatch]);
+  };
 
-  const [inputs, setInputs] = useState({
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const initialValue = {
     driver: "",
     date: "",
     time: "",
     capacity: 0,
-  });
+  };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(filterCars(inputs));
+  const [inputs, setInputs] = useState(initialValue);
+
+  const handleSubmit = () => {
+    if(JSON.stringify(inputs) === JSON.stringify(initialValue)) {
+      getData();
+    } else {
+      dispatch(filterCars(inputs));
+    }
   };
 
   const handleChange = (e) => {
-    setInputs({
-      ...inputs,
-      [e.target.name]: e.target.value,
-    });
+    if (e.target.name === "capacity" && (e.target.value < 0 || e.target.value === "")) {
+      setInputs({
+        ...inputs,
+        [e.target.name]: 0,
+      });
+    } else {
+      setInputs({
+        ...inputs,
+        [e.target.name]: e.target.value,
+      });
+    }
   };
 
   return (
@@ -42,7 +58,7 @@ const Filter = () => {
       <Row>
         <Col md={3}>
           <p>Tipe Driver</p>
-          <Form.Select onChange={handleChange} name="driver" >
+          <Form.Select onChange={handleChange} name="driver" value={inputs.driver}>
             <option>Pilih Tipe Driver</option>
             <option value="withDriver">Dengan Sopir</option>
             <option value="withoutDriver">Tanpa Sopir (Lepas Kunci)</option>
@@ -50,15 +66,15 @@ const Filter = () => {
         </Col>
         <Col>
           <p>Tanggal</p>
-          <Form.Control type="date" placeholder="Pilih Tanggal" onChange={handleChange} name="date" />
+          <Form.Control type="date" placeholder="Pilih Tanggal" onChange={handleChange} name="date" value={inputs.date} />
         </Col>
         <Col>
           <p>Waktu Jemput/Ambil</p>
-          <Form.Control type="time" placeholder="Pilih Waktu" onChange={handleChange} name="time" />
+          <Form.Control type="time" placeholder="Pilih Waktu" onChange={handleChange} name="time" value={inputs.time} />
         </Col>
         <Col md={3}>
           <p>Jumlah Penumpang (optional)</p>
-          <Form.Control type="number" placeholder="Jumlah Penumpang" onChange={handleChange} name="capacity" />
+          <Form.Control type="number" placeholder="Jumlah Penumpang" onChange={handleChange} name="capacity" min="0" />
         </Col>
         <Col md={2} className="mt-auto">
           <Button variant="success" onClick={handleSubmit}>

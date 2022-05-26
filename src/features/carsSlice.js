@@ -12,8 +12,8 @@ export const carsSlice = createSlice({
     filterCars: (state, action) => {
       const { driver, date, time, capacity } = action.payload;
       state.data = state.data.filter((car) => {
-        if (date === "") return car.available === true && car.capacity >= capacity;
-        else return car.availableAt.slice(0, 10) >= date && car.available === true && car.capacity >= capacity;
+        if (date === "") return car.capacity >= capacity;
+        else return car.availableAt.slice(0, 10) >= date && car.capacity >= capacity;
       });
     },
   },
