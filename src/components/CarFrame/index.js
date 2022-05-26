@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 
 const CarFrame = () => {
   const cars = useSelector((state) => state.carsReducer.data);
-
   return (
     <Container className="mb-section">
       <Row>

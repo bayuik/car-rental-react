@@ -7,7 +7,7 @@ const CardItem = ({ image, manufacture, model, rentPerDay, description, capacity
       <Card className="shadow">
         <Card.Body>
           <Col className="text-center my-3">
-            <img src={image} alt={model} className="rounded img-frame" />
+            <img src={`/${image}`}  alt={model} className="rounded img-frame" />
           </Col>
           <p>
             {manufacture} {model}
