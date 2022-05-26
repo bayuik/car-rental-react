@@ -2,7 +2,7 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 
 const Filter = () => {
   return (
-    <Container className="shadow p-4 mb-5 bg-body filter-container">
+    <Container className="shadow p-4 bg-body filter-container">
       <Row>
         <Col md={3}>
           <p>Tipe Driver</p>

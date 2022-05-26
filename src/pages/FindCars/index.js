@@ -15,7 +15,7 @@ const FindCars = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [dispatch]);
   return (
     <>
       <Header />

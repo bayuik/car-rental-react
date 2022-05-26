@@ -4,7 +4,7 @@ import { accordions } from "./accordions";
 
 const Faq = () => {
   return (
-    <Container className="mb-section">
+    <Container className="mb-section" id="faq">
       <Row>
         <Col>
           <h2 className="fw-bold mb-4">Frequently Asked Question</h2>

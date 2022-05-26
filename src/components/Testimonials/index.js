@@ -9,7 +9,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const Testimonials = () => {
   return (
-    <Container className="mb-section">
+    <Container className="mb-section" id="testimonial">
       <Row className="text-center">
         <h3 className="fw-bold">Testimonial</h3>
         <p>Berbagai review positif dari para pelanggan kami</p>

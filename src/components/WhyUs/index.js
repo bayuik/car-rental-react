@@ -3,7 +3,7 @@ import CardItem from "./CardItem";
 
 const WhyUs = () => {
   return (
-    <Container className="mb-section">
+    <Container className="mb-section" id="why-us">
       <Row className="mb-4">
         <h1 className="fw-bold mb-3">Why Us?</h1>
         <p>Mengapa harus pilih Binar Car Rental?</p>

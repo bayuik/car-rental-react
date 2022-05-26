@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { serviceLists } from "./serviceLists";
 const Services = () => {
   return (
-    <Container className="mb-section">
+    <Container className="mb-section" id="services">
       <Row>
         <Col>
           <img src="/images/img_service.png" alt="Service" />

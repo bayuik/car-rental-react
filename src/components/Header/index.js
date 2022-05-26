@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Navbar className="bgGreen">
+    <Navbar className="fixed-top bgNav">
       <Container>
         <Navbar.Brand>
           <Link to="/">
@@ -11,10 +11,10 @@ const Header = () => {
           </Link>
         </Navbar.Brand>
         <Nav className="mr-auto">
-          <Nav.Link href="/">Our Services</Nav.Link>
-          <Nav.Link href="/">Why Us</Nav.Link>
-          <Nav.Link href="/">Testimonial</Nav.Link>
-          <Nav.Link href="/">FAQ</Nav.Link>
+          <Nav.Link href="#services" className="fw-bold">Our Services</Nav.Link>
+          <Nav.Link href="#why-us" className="fw-bold">Why Us</Nav.Link>
+          <Nav.Link href="#testimonial" className="fw-bold">Testimonial</Nav.Link>
+          <Nav.Link href="#faq" className="fw-bold">FAQ</Nav.Link>
           <Button variant="success">Register</Button>
         </Nav>
       </Container>
